@@ -32,7 +32,7 @@ export const skills: SkillCategory[] = [
     ]
   },
   {
-    name: "Ferramentas & Outros",
+    name: "Tools & Others",
     items: [
       { name: "Git", level: 85 },
       { name: "Docker", level: 70 },

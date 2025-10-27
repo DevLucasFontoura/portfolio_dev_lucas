@@ -13,7 +13,7 @@ export default function Contact() {
     e.preventDefault();
     // Aqui você pode implementar o envio do formulário
     console.log('Form submitted:', formData);
-    alert('Mensagem enviada com sucesso!');
+    alert('Message sent successfully!');
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -29,22 +29,22 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Entre em Contato
+            Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Vamos trabalhar juntos! Entre em contato para discutir seu próximo projeto
+            Let's work together! Get in touch to discuss your next project
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Vamos conversar
+              Let's talk
             </h3>
             <p className="text-gray-600 mb-8">
-              Estou sempre interessado em novos projetos e oportunidades.
-              Se você tem uma ideia ou precisa de ajuda com desenvolvimento,
-              não hesite em entrar em contato!
+              I'm always interested in new projects and opportunities.
+              If you have an idea or need help with development,
+              don't hesitate to get in touch!
             </p>
 
             <div className="space-y-4">
@@ -80,7 +80,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Nome
+                Name
               </label>
               <input
                 type="text"
@@ -90,7 +90,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Seu nome completo"
+                placeholder="Your full name"
               />
             </div>
             <div>
@@ -105,12 +105,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="seu@email.com"
+                placeholder="your@email.com"
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Mensagem
+                Message
               </label>
               <textarea
                 id="message"
@@ -120,14 +120,14 @@ export default function Contact() {
                 required
                 rows={5}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Conte-me sobre seu projeto..."
+                placeholder="Tell me about your project..."
               />
             </div>
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Enviar Mensagem
+              Send Message
             </button>
           </form>
         </div>

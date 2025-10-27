@@ -1,4 +1,4 @@
-import { projects } from '@/data/projects';
+import { projects } from '../data/projects';
 
 export default function Projects() {
   return (
@@ -6,10 +6,10 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Meus Projetos
+            My Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Alguns dos projetos que desenvolvi para demonstrar minhas habilidades
+            Some of the projects I developed to showcase my skills
           </p>
         </div>
 

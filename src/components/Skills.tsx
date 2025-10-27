@@ -1,4 +1,4 @@
-import { skills, SkillCategory } from '@/data/skills';
+import { skills, SkillCategory } from '../data/skills';
 
 export default function Skills() {
   return (
@@ -6,10 +6,10 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Habilidades Técnicas
+            Technical Skills
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Tecnologias e ferramentas que utilizo para criar soluções digitais
+            Technologies and tools I use to create digital solutions
           </p>
         </div>
 
