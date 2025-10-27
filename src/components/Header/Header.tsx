@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import styles from './Header.module.css';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,20 +16,20 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold text-gray-900">
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <div className={styles.navContainer}>
+          <Link href="/" className={styles.logo}>
             Lucas Fontoura
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className={styles.desktopNav}>
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className={styles.navLink}
               >
                 {item.label}
               </Link>
@@ -37,11 +38,11 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className={styles.mobileMenuButton}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
-              className="w-6 h-6"
+              className={styles.mobileMenuIcon}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -67,13 +68,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
+          <div className={styles.mobileNav}>
+            <div className={styles.mobileNavContainer}>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className={styles.navLink}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
