@@ -20,7 +20,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <div className={styles.navContainer}>
           <Link href="/" className={styles.logo}>
-            Lucas Fontoura
+            DevLucasFontoura
           </Link>
 
           {/* Desktop Navigation */}

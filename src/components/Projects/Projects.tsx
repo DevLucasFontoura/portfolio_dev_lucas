@@ -1,5 +1,6 @@
 import { projects } from '../../data/projects';
 import styles from './Projects.module.css';
+import Image from 'next/image';
 
 export default function Projects() {
   return (
@@ -21,9 +22,19 @@ export default function Projects() {
               className={styles.card}
             >
               <div className={styles.imageContainer}>
-                <span className={styles.imagePlaceholder}>
-                  {project.name.charAt(0)}
-                </span>
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className={styles.projectImage}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                ) : (
+                  <span className={styles.imagePlaceholder}>
+                    {project.name.charAt(0)}
+                  </span>
+                )}
               </div>
               <div className={styles.content}>
                 <h3 className={styles.cardTitle}>

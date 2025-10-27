@@ -81,6 +81,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.05);
 }
 
 .imagePlaceholder {
